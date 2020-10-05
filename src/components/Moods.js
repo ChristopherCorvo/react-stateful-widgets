@@ -18,13 +18,13 @@ STEP 1: ---Done---
   The 'mood' slice of state should be initialized to one of the three variables right below our imports.
   Those variables exist so we don't need to write those long strings anywhere inside the component.
 
-STEP 2:
+STEP 2: ---Done---
   Make the color of the text be royalblue if the state of the mood is happy, crimson otherwise.
 
-STEP 3:
+STEP 3: ---Done---
   Remove the hard-coded mood and interpolate the 'mood' slice of state instead, using curly brackets.
 
-STEPS 4, 5, 6:
+STEPS 4, 5, 6: ---Done---
   Inside these click handlers set the correct mood, using 'setMood' and the variables below the imports.
 */
 
@@ -41,12 +41,15 @@ export default function Moods() {
 
   const makeHappy = () => {
     /* STEP 4 */
+    setMood(happyMood)
   };
   const makeSad = () => {
     /* STEP 5 */
+    setMood(sadMood)
   };
   const reset = () => {
     /* STEP 6 */
+    setMood(initialMood)
   };
 
   const style = {
@@ -58,7 +61,7 @@ export default function Moods() {
   return (
     <div className='widget-moods container'>
       <h2>Moods</h2>
-      <div id='mood' style={style}>Not sure how I feel</div> {/* STEP 3 */}
+      <div id='mood' style={style}>{mood}</div> {/* STEP 3 */}
       <div>
         <button id='makeHappy' onClick={makeHappy}>Make Happy</button>
         <button id='makeSad' onClick={makeSad}>Make Sad</button>
